@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Allura&family=Arvo:ital,wght@1,400;1,700&family=Comfortaa&family=Dancing+Script:wght@400..700&family=DynaPuff&family=Inconsolata&family=Josefin+Sans:wght@300&family=Martian+Mono:wght@600&family=Merriweather:wght@400;700&family=Montserrat&family=Mukta&family=Noto+Sans+JP:wght@400;500&family=Noto+Sans+NKo&family=Oswald&family=Poppins:wght@400;500&family=Righteous&family=Roboto+Mono:wght@100;500&family=Roboto:wght@100&family=Sacramento&family=Satisfy&family=Signika+Negative:wght@300;400&family=Ubuntu&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* latin */
+.dancing {
+  font-family: "Dancing Script", cursive;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+.satisfy-regular {
+  font-family: "Satisfy", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.sacramento {
+  font-family: "Sacramento", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* end */
+
+.merriweather-regular {
+  font-family: "Merriweather", serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.allura-regular {
+  font-family: "Allura", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+#link-off {
+  height: 0;
+  opacity: 0;
+}
+
+#link-on {
+  animation: expandHeight .7s ease-in-out forwards;
+}
+
+#fixed-off {
+  position: static;
+  background-color: transparent;
+}
+
+#fixed-on {
+  animation: navAnimate 1s ease-in-out forwards;
+
+}
+@keyframes expandHeight {
+  from {
+    height: 0;
+    opacity: 0;
+    color: transparent;
+  }
+  to {
+    position: fixed;
+    height: 200px;
+    opacity: 100;
+    color: white;
+  }
+}
+
+@keyframes navAnimate {
+  from {
+    /* position: absolute; */
+    background-color: transparent;
+  }
+  to {
+    position: fixed;
+    top: 0;
+    background-color: rgb(29, 28, 28);
+  }
+}
+
+body {
+  color: white;
+  background-color: rgb(47, 46, 46);
+  font-family: 'Poppins', sans-serif;
+}
+
+#events {
+  background-image: url('/public/bghitam1.jfif');
+  object-fit: cover; 
+  background-position: center;
+}
+
+
