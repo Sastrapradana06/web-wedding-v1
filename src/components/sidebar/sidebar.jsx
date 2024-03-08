@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
+import MusicPlayer from "../music-player/MusicPlayer";
 
 export default function Sidebar() {
   const [link, setLink] = useState(false)
@@ -40,6 +41,7 @@ export default function Sidebar() {
           <a href="#about" className="hover:text-slate-500 duration-200" onClick={handleNavigate}>About</a>
           <a href="#events" className="hover:text-slate-500 duration-200" onClick={handleNavigate}>Events</a>
           <a href="#gallery" className="hover:text-slate-500 duration-200" onClick={handleNavigate}>Gallery</a>
+          <MusicPlayer />
         </div>
       </div>
     </>
