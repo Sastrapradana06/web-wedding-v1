@@ -5,10 +5,10 @@ import React, { useEffect, useState } from "react";
 export const ImagesSlider = ({
   images,
   children,
-  overlay = false,
+  overlay = true,
   overlayClassName,
   className,
-  autoplay = false,
+  autoplay = true,
   direction = "up",
 }: {
   images: string[];
