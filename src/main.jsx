@@ -6,6 +6,7 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
+import TulisTamu from './views/BuatTamu/TulisTamu.jsx';
 
 
 
@@ -14,7 +15,15 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
-  }
+  },
+  {
+    path: "/:nama_tamu/:alamat",
+    element: <App />,
+  },
+  {
+    path: "/tulis-tamu",
+    element: <TulisTamu />,
+  },
 
 ]);
 
