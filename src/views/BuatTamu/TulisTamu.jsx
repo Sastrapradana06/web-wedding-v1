@@ -5,7 +5,6 @@ import { useNavigate } from 'react-router-dom';
 export default function TulisTamu() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isAlert, setIsAlert] = useState(false);
-  const [urlCopy, setUrlCopy] = useState('');
   const [data, setData] = useState({
     'nama_tamu': '',
     'alamat': '',
@@ -19,11 +18,12 @@ export default function TulisTamu() {
 
     let url = window.location.href;
     const replaceUrl = url.replace('/tulis-tamu', '');
-    setUrlCopy(`${replaceUrl}/${nama_tamu}/${alamat}`)
+    const urlCopy = `${replaceUrl}/${nama_tamu}/${alamat}`
 
     navigator.clipboard.writeText(urlCopy)
       .then(() => {
         console.log('URL berhasil disalin ke clipboard');
+
         setIsAlert(true)
       })
       .catch((error) => {
