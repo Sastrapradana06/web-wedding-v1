@@ -6,9 +6,23 @@ export default function MusicPlayer() {
   const [isPlaying, setIsPlaying] = useState(false);
 
   useEffect(() => {
-    audioRef.current.play();
-    setIsPlaying(true)
-  }, [])
+    const audioElement = audioRef.current;
+
+    const handleUserInteraction = () => {
+      audioElement.play();
+      document.removeEventListener('click', handleUserInteraction);
+      document.removeEventListener('keydown', handleUserInteraction);
+      setIsPlaying(true);
+    };
+
+    document.addEventListener('click', handleUserInteraction);
+    document.addEventListener('keydown', handleUserInteraction);
+
+    return () => {
+      document.removeEventListener('click', handleUserInteraction);
+      document.removeEventListener('keydown', handleUserInteraction);
+    };
+  }, []);
 
   const togglePlayPause = () => {
     if (audioRef.current) {
