@@ -101,7 +101,7 @@ export default function TulisTamu() {
                   <label htmlFor="alamat" className='font-medium'>Alamat</label>
                   <input type="text" name='alamat' className='border border-sky-400 px-2 py-2 rounded-sm outline-sky-600' value={data.alamat} onChange={handleInput} />
                 </div>
-                <div className="w-full h-max border flex justify-start gap-2 mt-2">
+                <div className="w-full h-max flex justify-start gap-2 mt-2">
                   <Button onClick={resetData} className='rounded-md bg-red-500 text-white'>
                     Close
                   </Button>

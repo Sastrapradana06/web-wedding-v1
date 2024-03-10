@@ -1,9 +1,14 @@
 import { FaPlayCircle, FaPause } from "react-icons/fa";
-import { useState, useRef } from 'react';
+import { useState, useRef, useEffect } from 'react';
 
 export default function MusicPlayer() {
   const audioRef = useRef(null);
   const [isPlaying, setIsPlaying] = useState(false);
+
+  useEffect(() => {
+    audioRef.current.play();
+    setIsPlaying(true)
+  }, [])
 
   const togglePlayPause = () => {
     if (audioRef.current) {
