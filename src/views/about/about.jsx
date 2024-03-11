@@ -1,4 +1,5 @@
 import { Carousel, Card } from 'antd';
+import LoveStory from './love-story';
 const { Meta } = Card;
 
 export default function About() {
@@ -33,14 +34,14 @@ export default function About() {
 
   return (
     <div className="w-full h-max bg-[#436850] flex justify-center " id='about'>
-      <div className="w-[90%] h-full pt-24 pb-2 flex flex-col gap-4">
+      <div className="w-[90%] h-full pt-4 pb-2 flex flex-col gap-4">
         <div className="flex flex-col gap-3">
-          <h1 className="uppercase tracking-[2px]">about us</h1>
+          <h1 className="uppercase tracking-[2px] text-center text-white">about us</h1>
           <p className="merriweather-regular text-[1.5rem] capitalize text-zinc-400">who&rsquo;s that</p>
         </div>
         <div className="w-full h-max border flex flex-col gap-2">
           <div className="w-full h-[500px] rounded-md">
-            <Carousel dotPosition='left' autoplaySpeed={5000} autoplay>
+            <Carousel dotPosition='left' autoplaySpeed={5000}>
               <div className='w-full h-[500px]'>
                 <CardCowo />
               </div>
@@ -50,6 +51,7 @@ export default function About() {
             </Carousel>
           </div>
         </div>
+        <LoveStory />
       </div>
     </div>
 
